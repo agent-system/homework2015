@@ -1,0 +1,8 @@
+<launch>
+  <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node" />
+  <node name="turtlesim_teleop" pkg="roseus" type="roseus"
+        args="$(find homework20150422)/euslisp/turtlesim-teleop.l"
+        output="screen">
+    <remap from="cmd_vel" to="/turtle1/cmd_vel" />
+  </node>
+</launch>
