@@ -12,12 +12,12 @@ roscore
   - Open new terminal and execute command below
   ```bash
   # Terminal 2
-rosrun roseus talker.l
+rosrun homework20150422 talker.l
 ```
   - Open new terminal and execute command below:
   ```bash
   # Terminal 3
-rosrun roseus listener.l
+rosrun homework20150422 listener.l
 ```
 
   - Open new terminal and execute commands below:
