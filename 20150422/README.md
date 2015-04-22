@@ -100,7 +100,7 @@ roslaunch homework20150422 face_detect.launch
 
   - You can see 2 image_view (one shows raw image view, and another shows the image drawn rectangle over the detected face using OpenCV)
 
-```xml
+  ```xml
   <arg name="show_debug_image" default="true" />
   ...
   <node name="debug_image_viewer" pkg="image_view" type="image_view"
@@ -112,7 +112,7 @@ roslaunch homework20150422 face_detect.launch
   - You can also set arguments when launches launch file
     e.g.: `roslaunch homework20150422 face_detect.launch show_debug_image:=false`
 
-```xml
+  ```xml
   <include file="$(find homework20150422)/launch/camera.launch" />
 ```
   - You can include another `launch` files.
