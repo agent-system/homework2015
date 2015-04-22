@@ -1,12 +1,12 @@
 # homework20150422
 
 1. execute `talker/listener` sample
-
-**Goal:** Comprehend node, topic, publish/subscriber and command line tools for ROS
+  
+  **Goal:** Comprehend node, topic, publish/subscriber and command line tools for ROS
 
   - Open new terminal and execute command below:
   ```bash
-  # Terminal 1
+# Terminal 1
 roscore
 ```
   - Open new terminal and execute command below
@@ -30,7 +30,7 @@ rostopic echo /chatter # you can also see the message published as /chatter topi
 
 2. execute `turtlesim` sample
 
-**Goal:** Comprehend ros distributed system with multiple launguages, and its launching system called `roslaunch`
+  **Goal:** Comprehend ros distributed system with multiple launguages, and its launching system called `roslaunch`
 
   - Open new terminal and execute commands below:
   ```bash
@@ -80,7 +80,9 @@ rosnode list # you can see what nodes are on ROS
       You can change subscribe/publish topic of the node without changing any code.
 
 
-2. execute `face_detector` sample:
+3. execute `face_detector` sample:
+
+  **GOAL** Comprehend nested `launch`, topic remapping
 
   - Open new terminal and execute command below:
   ```bash
@@ -115,7 +117,7 @@ roslaunch homework20150422 face_detect.launch
 ```
   - You can include another `launch` files.
 
-3. Make your own image processing node
+4. Make your own image processing node
 
   - previous `face_detector` example has node doing 3 things:
     - Subscribe `sensor_msgs/Image` message
