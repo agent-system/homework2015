@@ -38,6 +38,8 @@ rostopic echo /chatter # you can also see the message published as /chatter topi
 roslaunch homework20150422 turtlesim.launch
 ```
 
+  - Focus the terminal and push `up` `down` `right` `left` keys.
+
   - See what nodes are launching by `rosnode list`:
   ```bash
   # Terminal 2
@@ -61,7 +63,8 @@ rosnode list # you can see what nodes are on ROS
   <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node" />
 ```
     - `name` attribute: name of the node
-        **NOTE** (each node name is already named in each nodes, but once you set name different from that written at original node, it will be overwriten (we call it `remapped`))
+
+  **NOTE** (each node name is already named in each nodes, but once you set name different from that written at original node, it will be overwriten (we call it `remapped`))
     - `pkg` attribute: package of the node
     - `type` attribute: program name of the node (we can use each independent node by `rosrun <pkg> <type>`)
 
