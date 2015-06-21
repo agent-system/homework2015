@@ -43,3 +43,47 @@ $ echo 'source $HOME/ros/hydro/devel/setup.bash' >> $HOME/.bashrc
 # 2015/4/29-
 
 To be Continued...
+
+# 2015/6/17
+
+See the gazebo slides in the homework archives.
+
+Getting Started with Gazebo
+
+launch gazebo with samplerobot
+wget -q -O /tmp/jsk.rosbuild https://raw.github.com/jsk-ros-pkg/jsk_common/master/jsk.rosbuild
+bash /tmp/jsk.rosbuild -s --rtm hydro
+roslaunch hrpsys_gazebo_tutorials gazebo_samplerobot_no_controllers.launch
+rtmlaunch hrpsys_gazebo_tutorials samplerobot_hrpsys_bringup.launch
+
+with kinect
+roscd hrpsys_gazebo_tutorials
+git remote add furushchev https://github.com/furushchev/rtmros_tutorials.git
+git checkout –b samplerobot-with-kinect furushchev/samplerobot-with-kinect
+catkin bt
+
+source ~/ros/hydro/devel/setup.bash
+# terminal 1
+roslaunch hrpsys_gazebo_tutorials gazebo_samplerobot_no_controllers_drc_testbed.launch
+
+# terminal 2
+rtmlaunch hrpsys_gazebo_tutorials samplerobot_hrpsys_bringup.launch
+
+# terminal 3
+rosrun rviz rviz
+# add RobotModel and PointCloud2 on rviz menu
+
+# terminal 4
+roscd hrpsys_ros_bridge_tutorials/euslisp
+roseus samplerobot-interface.l
+
+;; 以下roseus
+(samplerobot-init)
+(send *ri* :angle-vector (send *sr* :reset-pose) 4000)
+(send *ri* :start-auto-balancer)
+(send *ri* :start-st)
+(send *ri* :go-pos 1 0 0) ;; x y theta [m] たぶんこける
+
+
+
+
