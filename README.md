@@ -46,12 +46,13 @@ To be Continued...
 
 # 2015/6/17
 
-See the gazebo slides in the homework archives.
+See the gazebo slides in the slide archives: http://1drv.ms/1FdAUDy 
 
 Getting Started with Gazebo
 
-launch gazebo with samplerobot
 ```bash
+# launch gazebo with samplerobot
+
 wget -q -O /tmp/jsk.rosbuild https://raw.github.com/jsk-ros-pkg/jsk_common/master/jsk.rosbuild
 bash /tmp/jsk.rosbuild -s --rtm hydro
 roslaunch hrpsys_gazebo_tutorials gazebo_samplerobot_no_controllers.launch
