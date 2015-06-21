@@ -51,12 +51,14 @@ See the gazebo slides in the homework archives.
 Getting Started with Gazebo
 
 launch gazebo with samplerobot
+```bash
 wget -q -O /tmp/jsk.rosbuild https://raw.github.com/jsk-ros-pkg/jsk_common/master/jsk.rosbuild
 bash /tmp/jsk.rosbuild -s --rtm hydro
 roslaunch hrpsys_gazebo_tutorials gazebo_samplerobot_no_controllers.launch
 rtmlaunch hrpsys_gazebo_tutorials samplerobot_hrpsys_bringup.launch
 
-with kinect
+# with kinect
+
 roscd hrpsys_gazebo_tutorials
 git remote add furushchev https://github.com/furushchev/rtmros_tutorials.git
 git checkout –b samplerobot-with-kinect furushchev/samplerobot-with-kinect
@@ -84,6 +86,7 @@ roseus samplerobot-interface.l
 (send *ri* :start-st)
 (send *ri* :go-pos 1 0 0) ;; x y theta [m] たぶんこける
 
+```
 
 
 
