@@ -88,7 +88,7 @@ roseus samplerobot-interface.l
 (send *ri* :angle-vector (send *sr* :reset-pose) 4000)
 (send *ri* :start-auto-balancer)
 (send *ri* :start-st)
-(send *ri* :go-pos 1 0 0) ;; x y theta [m] たぶんこける
+(send *ri* :go-pos -0.5 0 0) ;; x y theta [m]
 
 ```
 
