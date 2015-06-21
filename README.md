@@ -74,11 +74,14 @@ rtmlaunch hrpsys_gazebo_tutorials samplerobot_hrpsys_bringup.launch
 
 # terminal 3
 rosrun rviz rviz
-# add RobotModel and PointCloud2 on rviz menu
+# add RobotModel, PointCloud2 and Camera on rviz menu
+# choose /xtion/depth/points/ at Topic of PointCloud2
+# choose /xtion/depth/merge_raw at Image Topic of Camera
 
 # terminal 4
 roscd hrpsys_ros_bridge_tutorials/euslisp
 roseus samplerobot-interface.l
+# you may need rosrun roseus generate-all-msg-srv.sh 
 
 ;; 以下roseus
 (samplerobot-init)
