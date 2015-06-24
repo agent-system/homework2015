@@ -103,6 +103,8 @@ roscd
 cd ../src
 wstool set jsk-ros-pkg/jsk_3rdparty --git https://github.com/jsk-ros-pkg/jsk_3rdparty.git
 wstool up jsk-ros-pkg/jsk_3rdparty
+cd jsk-ros-pkg/jsk_3rdparty/3rdparty/assimp_devel
+touch CATKIN_IGNORE # this is for speedup compiling
 cd ..
 catkin build collada_urdf_jsk_patch
 catkin build hrpsys_gazebo_tutorials
