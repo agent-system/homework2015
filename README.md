@@ -92,5 +92,19 @@ roseus samplerobot-interface.l
 
 ```
 
+## Tips
 
+- when executing `catkin bt`, error `collada_urdf_jsk_patch not found` occurs in indigo
 
+    please add `jsk_3rdparty` repository to your local and build again
+
+    ```bash
+roscd
+cd ../src
+wstool set jsk-ros-pkg/jsk_3rdparty --git https://github.com/jsk-ros-pkg/jsk_3rdparty.git
+wstool up jsk-ros-pkg/jsk_3rdparty
+cd ..
+catkin build collada_urdf_jsk_patch
+catkin build hrpsys_gazebo_tutorials
+source devel/setup.bash
+```
