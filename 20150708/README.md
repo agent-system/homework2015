@@ -1,4 +1,10 @@
-# homework 20150707
+# homework 20150708
+
+update source code
+```bash
+git checkout -b otsubo/sample-basket-update
+git pull otsubo samplerobot-basket-update
+```
 
 launch gazebo
 ```bash
