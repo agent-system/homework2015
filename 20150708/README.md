@@ -1,11 +1,24 @@
 # homework 20150707
 
-roslaunch hrpsys_gazebo_tutorials gazebo_sample_robot_no_controllers.launch WORLD:=$HOME/ros/hydro/src/rtm-ros-robotics/rtmros_tutorilas/hrpsys_gazebo_tutorials/worlds/Sample2.world
+launch gazebo
+```bash
+# terminal 1
+roslaunch hrpsys_gazebo_tutorials gazebo_samplerobot_no_controllers_basket.launch
+```
 
-rtmlaunch hrpsys_gazebo_tutorials/samplerobot_hrpsys_bringup.launch
+launch hrpsys
+```bash
+# terminal 2
+rtmlaunch hrpsys_gazebo_tutorials samplerobot_hrpsys_bringup.launch
+```
 
+control robot
+```bash
+# terminal 3
+roscd hrpsys_gazebo_tutorials/euslisp
+emacs -nw samplerobot-reaching2.l
 
-in Shell
+# in Shell
 (roseus samplerobot-reaching2.l)
 (send *ri* :calibrate-inertia-sensor)
 (send *ri* :start-auto-balancer)
@@ -18,5 +31,5 @@ in Shell
 (send *ri* :go-pos 0 0.5 0)
 (send *ri* :go-pos 0 0.5 0)
 (reaching-pose)
-
+```
 
