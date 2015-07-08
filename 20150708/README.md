@@ -19,6 +19,8 @@ roscd hrpsys_gazebo_tutorials/euslisp
 emacs -nw samplerobot-reaching2.l
 
 # in Shell
+(main)
+#in (main)
 (roseus samplerobot-reaching2.l)
 (send *ri* :calibrate-inertia-sensor)
 (send *ri* :start-auto-balancer)
