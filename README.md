@@ -111,10 +111,11 @@ catkin build collada_urdf_jsk_patch
 catkin build hrpsys_gazebo_tutorials
 source devel/setup.bash
 ```
-# 2015/7/8
+
 
 # 2015/7/15
 ```
+レポート提出
 提出先：工学部2号館３階機械系事務室（３０７，３０８号室）
 期限：２０１５年７月３１日
 内容：
